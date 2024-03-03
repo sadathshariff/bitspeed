@@ -1,38 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  padding: 10px;
+  background-color: #f0f0f0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  display: flex;
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container_chatflow {
+  width: 80%;
+  position: relative; /* Ensures proper positioning of absolute elements */
+}
+
+.container_sidebar {
+  width: 20%;
+  background-color: #f0f0f0;
+}
+
+.node-panel {
+  padding: 10px;
+  text-align: center;  
+}
+
+.node-panel h2 {
+  margin-bottom: 10px;
+}
+
+.node {
+  margin-bottom: 5px;  
+  padding: 5px 10px;
+  background-color: #ddd;
+  border-radius: 10px;
+  text-align: center;
+  cursor: grab;
+}
+
+.settings-panel {
+  padding: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.settings-panel h2 {
+  margin-bottom: 10px;
+}
+
+.settings-panel input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input:focus{
+  outline: none;
+}
+
+ button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;    
+}
+
+ button:hover {
+  background-color: #0056b3;
 }
